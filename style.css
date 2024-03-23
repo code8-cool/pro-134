@@ -1,0 +1,53 @@
+body
+{
+    
+    background-image: linear-gradient(to right top, #c12018, #dc143c,#ff0000 ,#ff4500, #ff8c00, );
+  
+}
+
+.heading
+{
+    font-size: 25px;
+    width: 100%;
+    margin: 0%;
+    animation-name: heading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    background-color:goldenrod;
+}
+
+.note
+{
+    font-size: 15px;
+    color:lemonchiffon
+}
+
+
+canvas
+{
+    border: 5px solid white;
+    border-radius: 20px;
+    animation-name: canvas;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin-top: 70px;
+}
+
+.big{
+color: slategray;
+}
+
+@keyframes canvas {
+
+from { box-shadow: 13px 13px 10px burlywood}
+to { box-shadow: 15px 15px 20px gold}
+
+}
+
+@keyframes heading {
+
+    from { box-shadow: 13px 13px 7px burlywood}
+    to { box-shadow: 15px 15px 5px darkred}
+    
+
+    }
