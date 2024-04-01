@@ -1,3 +1,10 @@
+leftWx = 0;
+rightWx = 0;
+difference = 0;
+
+
+
+
 function setup ()
 {
      video = createCapture(VIDEO);
@@ -13,6 +20,9 @@ function setup ()
     function draw()
     {
         background('#000000')
+        textSize(difference)
+        fill("#FFFFED")
+        text("Joel", difference, difference)
     }
 
     function modelLoaded() {
@@ -24,5 +34,12 @@ function setup ()
         if(results.length > 0)
         {
             console.log(results);
+
+        leftWx = results[0].pose.leftWrist.x;
+        rightWx = results[0].pose.rightWrist.x;
+        
+        difference = floor(leftWx - rightWx);
+        console.log("leftWx = " + leftWx + "rightWx = " + rightWx + "difference " + difference);
+    
         }
     }
